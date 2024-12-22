@@ -1,0 +1,25 @@
+{
+  "name": "demoproject",
+  "version": "1.0.0",
+  "description": "\"# DemoProject\"",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Robot-Planet/DemoProject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Robot-Planet/DemoProject/issues"
+  },
+  "homepage": "https://github.com/Robot-Planet/DemoProject#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.10.2"
+  }
+}
