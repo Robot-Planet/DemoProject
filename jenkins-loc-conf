@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+        stage('Run CI Pipeline') {
+            steps {
+                script {
+                    load 'Jenkinsfile.ci' // Reference the correct file name
+                }
+            }
+        }
+    }
+}
