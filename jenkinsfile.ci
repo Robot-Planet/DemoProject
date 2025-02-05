@@ -31,13 +31,13 @@ pipeline {
                 '''
             }
         }
-        stage('show-report') {
-            steps {
-                sh '''
-                    npx playwright show-report
-                '''
-            }
-        }
+        //stage('show-report') {
+        //    steps {
+        //        sh '''
+        //            npx playwright show-report
+        //        '''
+        //    }
+        //}
     }
     
 }
