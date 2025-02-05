@@ -27,7 +27,7 @@ pipeline {
         stage('test') {
             steps {
                 sh '''
-                    npx playwright test demoproject.spec.ts --project=chromium --reporter=line
+                    npx playwright test promotionservice-api.spec.ts --project=chromium --reporter=line
                 '''
             }
         }
