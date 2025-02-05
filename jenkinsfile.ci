@@ -1,15 +1,20 @@
 pipeline {
     agent any
 
+    triggers {
+            pollSCM('* * * * *')  // Poll SCM every 1 minutes
+    }
+
     environment {
         // PLAYWRIGHT_VERSION = '1.41.1-jammy'
         PLAYWRIGHT_VERSION = '1.49.1'
     }
 
-    tools {
-        // nodejs 'NodeJS 20.9'
-        nodejs 'NodeJS 20.10.0'
-    }
+    // tools {
+    //     // nodejs 'NodeJS 20.9'
+    //     // nodejs 'NodeJS 20.10.0'
+    //     nodejs 'NodeJS 21.0.5' // 2025-02-05
+    // }
     
     stages {
         stage('playwright') {
@@ -22,10 +27,17 @@ pipeline {
         stage('test') {
             steps {
                 sh '''
-                    npx playwright test demoproject.spec.ts --project chromium --reporter=line
+                    npx playwright test demoproject.spec.ts --project=chromium --reporter=line
                 '''
             }
         }
+        // stage('show-report') {
+        //    steps {
+        //        sh '''
+        //            npx playwright show-report
+        //        '''
+        //    }
+        // }
     }
     
 }
