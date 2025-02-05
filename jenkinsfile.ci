@@ -11,9 +11,9 @@ pipeline {
     }
 
     tools {
-        // nodejs 'NodeJS 20.9'
+        nodejs 'NodeJS 20.9'
         // nodejs 'NodeJS 20.10.0'
-        nodejs 'NodeJS 21.0.5' // 2025-02-05
+        // nodejs 'NodeJS 21.0.5' // 2025-02-05
     }
     
     stages {
